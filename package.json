@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/bonjo7/keycloak-nodejs/issues"
   },
-  "homepage": "https://github.com/bonjo7/keycloak-nodejs#readme"
+  "homepage": "https://github.com/bonjo7/keycloak-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
