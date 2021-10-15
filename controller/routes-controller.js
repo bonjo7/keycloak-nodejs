@@ -1,19 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const app = express.Router();
+const keycloak = require('../config/keycloak-config.js').getKeycloak();
 
-router.get('/nouseraccount', function(req, res){
+app.get('/nouseraccount', function(req, res){
     res.send("Hello Anonymous");
 });
-router.get('/user', function(req, res){
+app.get('/user', keycloak.protect('user'), function(req, res){
     res.send("Hello User");
 });
 
-router.get('/admin', function(req, res){
+app.get('/admin', keycloak.protect('admin'), function(req, res){
     res.send("Hello Admin");
 });
 
-router.get('/all-user', function(req, res){
+app.get('/all-user', keycloak.protect(['user','admin']),  function(req, res){
     res.send("Hello All User");
 });
 
-module.exports = router;
+module.exports = app;
