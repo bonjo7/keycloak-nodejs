@@ -1,0 +1,23 @@
+{
+  "name": "keycloak-nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS application with routes protected by keycloak",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bonjo7/keycloak-nodejs.git"
+  },
+  "keywords": [
+    "keycloak",
+    "nodejs"
+  ],
+  "author": "Bernard Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bonjo7/keycloak-nodejs/issues"
+  },
+  "homepage": "https://github.com/bonjo7/keycloak-nodejs#readme"
+}
