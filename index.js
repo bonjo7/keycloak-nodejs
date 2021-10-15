@@ -1,11 +1,15 @@
-var express = require('express');
-var app = express();
-var testController = require('./controller/routes-controller.js');
+const express = require('express');
+const app = express();
+const dotenv = require("dotenv");
+const testController = require('./controller/routes-controller.js');
+
+dotenv.config();
+
+const port = process.env.PORT || "3000";
 
 app.use('/routes', testController);
-
 app.get('/', function(req, res){
    res.send("Server is up!");
 });
 
-app.listen(3000);
+app.listen(port);
